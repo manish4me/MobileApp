@@ -1,0 +1,47 @@
+<!---- contact ---->
+			<div id="contact" class="contact">
+				<div class="map">
+					<div class="contact-info">
+						<div class="container">
+						<!---- contact-grids ---->
+						<div class="contact-grids">
+							<h3>contact us</h3>
+							<div class="col-md-5 contact-grid-left">
+								<h4>contact information</h4>
+								<ul>
+									<li><span class="cal"> </span><label>Monday - Friday :</label><small>9:30 AM to 6:30 PM</small></li>
+									<li><span class="pin"> </span><label>Address :</label><small>123 Some Street , London, UK, CP 123</small></li>
+									<li><span class="phone"> </span><label>Phone :</label><small>(032) 987-1235</small></li>
+									<li><span class="fax"> </span><label>Fax :</label><small>(123) 984-1234</small></li>
+									<li><span class="mail"> </span><label>Email :</label><small> info@doctor.com</small></li>
+								</ul>
+							</div>
+							<div class="col-md-7 contact-grid-right">
+								<h4>leave us a message</h4>
+								<form>
+									<input type="text" value="Name:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name:';}">
+									<input type="text" value="Email:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email:';}">
+									<input type="text" value="Phone No:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone No:';}">
+									<textarea rows="2" cols="70" onfocus="if(this.value == 'Message:') this.value='';" onblur="if(this.value == '') this.value='Message:';">Message:</textarea>
+									<input type="submit" value="SEND MESSAGE" />
+								</form>
+							</div>
+							<div class="clear"> </div>
+						</div>
+						<!---- contact-grids ---->
+					</div>
+					</div>
+				</div>
+			</div>
+			<!---- contact ---->
+
+			<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					var w = $(window).width();
+					if(w<400)
+	        		if($('#topNav').css('display') != 'none')
+	        			menu.slideToggle();
+			});
+			</script>

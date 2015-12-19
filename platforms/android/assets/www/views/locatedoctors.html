@@ -1,0 +1,58 @@
+<!---- contact ---->
+			<div id="map" class="contact">
+				<div class="map">
+					<div class="map-info">
+						<div class="container">
+						<!---- contact-grids ---->
+						<div class="contact-grids">
+							<h3>Locate Doctors</h3>
+							<div class="col-md-7 contact-grid-right">
+								<h4>Find Doctors by Address</h4>
+								<form ng-submit="searchDoctors()" name="form" role="form">
+
+ 	<div class="form-group" ng-class="{ 'has-error': form.address.$dirty && form.address.$error.required }">
+        <input type="text" ng-model="address" name="address" id="address" class="form-control input-block-level" placeholder="Address"  value="Address:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address:';}" required>
+        <span ng-show="form.address.$dirty && form.address.$error.required" class="help-block">Address is required</span>
+    </div>
+
+									<input type="submit" ng-disabled="form.$invalid" value="{{search}}" />
+
+									<div class="clear"></div>
+									<div>
+									    <ng-map default-style="true" center="{{shop.latitude}},{{shop.longitude}}" zoom="10">
+									      <marker id="{{shop.doc_id}}" ng-repeat="shop in shops" position="{{shop.latitude}},{{shop.longitude}}"
+									      on-mouseover="map.showInfoWindow('foo-iw')"></marker>
+
+									      <info-window id="foo-iw">
+									        <div ng-non-bindable="">
+									          <h3>{{shop.fullName}} - {{shop.specilist}}</h3><br/>
+									          Address: {{shop.address}}<br/>
+									          Visiting Hours: {{shop.hours}}<br/>
+									          <a href="#">Book Appointment</a>
+									        </div>
+									      </info-window>
+									    </ng-map>
+  									</div>
+								</form>
+							</div>
+							<div class="clear"> </div>
+						</div>
+						<!---- contact-grids ---->
+					</div>
+					</div>
+				</div>
+			</div>
+			<!---- contact ---->
+<style>
+  map, div[map] {display:block; width:600px; height:250px;}
+</style>
+			<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					var w = $(window).width();
+					if(w<400)
+	        		if($('#topNav').css('display') != 'none')
+	        			menu.slideToggle();
+			});
+			</script>

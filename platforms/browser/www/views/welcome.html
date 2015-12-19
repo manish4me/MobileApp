@@ -1,0 +1,28 @@
+
+
+
+
+<div class="header team-head text-left">
+<h3>Hi {{user.fullname}}!</h3>
+<p>&nbsp;</p>
+<h2>Welcome to Prescription Vault</h2>
+<p>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis ipsum orci, molestie mattis metus viverra tristique. Duis tincidunt leo quis magna ultricies hendrerit. Phasellus blandit erat sed mi iaculis feugiat. Sed vel sem ut est vulputate vestibulum. Sed massa est, dictum nec dapibus quis, dapibus sed velit. Integer blandit ligula ut convallis venenatis. Nulla facilisi. Suspendisse ornare non dui a commodo. Praesent condimentum a massa et accumsan.
+
+Curabitur nulla ex, dictum id venenatis pulvinar, pulvinar eget lacus. Phasellus luctus purus vitae lorem pellentesque ultrices. Suspendisse ut mattis lorem, ac pulvinar nulla. Pellentesque eu odio tellus. Integer at pulvinar magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris luctus nunc et arcu tincidunt aliquam a quis erat. Donec eleifend sollicitudin velit sed dictum. Maecenas euismod felis et nulla rhoncus, sit amet interdum lacus lacinia. Suspendisse elementum erat sit amet erat porta, sit amet convallis nulla sodales. 
+</p>
+<p>&nbsp;</p>
+<p><a href="#/login" class="btn btn-primary">Logout</a></p>
+</div>
+
+			<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					
+	        		var w = $(window).width();
+					if(w<400)
+	        		if($('#topNav').css('display') != 'none')
+	        			menu.slideToggle();
+			});
+			</script>
